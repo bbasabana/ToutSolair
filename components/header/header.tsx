@@ -1,5 +1,3 @@
-import styles from './header.module.css'
-
 function HeaderPage(){
     return <div className="bg-gray-900 Header-HomePage">
                 <div

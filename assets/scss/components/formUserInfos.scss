@@ -1,0 +1,24 @@
+.solarFormUserInfos{
+  .hero-title-solar{
+
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .solarFormUserInfos {
+    margin-top: 0em;
+  }
+}
+
+@media (min-width: 768px) {
+  @media (min-width: 1024px) {
+    .solarFormUserInfos {
+      margin-top: 0rem;
+    }
+  }
+}

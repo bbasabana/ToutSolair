@@ -1,6 +1,10 @@
-function MainPage(){
-    return  <div className="explain-solar py-16 md:py-16 lg:py-28">
+import LeftContent from "./leftContent";
+import RightContent from "./rightContent";
 
-    </div>
+function MainPage(){
+    return  <section className="container px-4 py-10 mx-auto lg:h-128 lg:space-x-8 lg:flex lg:items-center">
+                <LeftContent/>
+                <RightContent/>
+            </section>
 }
 export default MainPage

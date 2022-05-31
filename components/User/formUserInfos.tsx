@@ -147,10 +147,10 @@ const {
                         <ButtonForm
                             type="submit"
                             disabled={!(isValid && dirty)}
-                            loading={ isSubmitting === true &&   <div className="w-4 h-4 rounded-full animate-spin border-2 border-dashed border-yellow-600 border-t-transparent"></div>}
-                            svg={(!isValid || !dirty ) ? <svg className="mr-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c1b1b" ><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                             : <svg className="mr-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5a623" ><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg>}
-                            text={`${!(isValid && dirty) && !isValidating ? (isSubmitting === true ? 'Patienter...' : 'Continue') : 'Continue'}`}
+                            loading={ isSubmitting &&   <div className="w-4 h-4 mr-3 rounded-full animate-spin border-2 border-dashed border-yellow-600 border-t-transparent"></div>}
+                            svg={(!isValid || !dirty ) && !isSubmitting ? <svg className="mr-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c1b1b" ><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                             : (isValid || dirty) && !isSubmitting ? <svg className="mr-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5a623" ><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg>  : '' }
+                            text={isSubmitting ? 'Patienter...' : 'Continue'}
                             className={`${!(isValid && dirty) ? 'btn-disabled' : 'btn-actived'}`}
                         />
                     </div>

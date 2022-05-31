@@ -1,18 +1,19 @@
 import {useState} from "react";
-import {Form,ErrorMessage, useFormik} from "formik";
+import {Form,ErrorMessage, FormikHelpers, useFormik} from "formik";
 import validationSchema from "../validation/userFieldValidate";
 
 const usedForm = () => {
 
-    const  onSubmit = async (values:any) => {
+    const  onSubmit =  (values:any) => {
         //handleSubmit(values)
-
-        const isValid  = await validationSchema.isValid(values)
+        //const isValid  = await validationSchema.isValid(values)
         if(!isValid){
             setSubmitting(true)
         }
         console.log(JSON.stringify(values))
     }
+
+
 
     // const onSubmit = {(values, actions) => {
     //     setTimeout(() => {
